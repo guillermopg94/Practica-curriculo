@@ -1,0 +1,95 @@
+@import 'functions';
+
+body, *::after{
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+main{
+    width: 80%;
+    margin: 5%;
+    margin-right: auto;
+    margin-left: auto;
+    border: 3px solid black;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+.left-container{
+    width: 25%;
+    border: 3px solid black;
+    margin: 2%;
+    flex-wrap: wrap;
+    background-color: rgb(61, 59, 59);  
+}
+.right-container{
+    width: 75%;
+    margin: 2%;
+    flex-wrap: wrap;
+}
+img{
+    width: 100%;
+    object-fit: cover;
+}
+h2, p, hr{
+    margin: 4%;
+    color: white;
+}
+.h2-right{
+    color: black;
+    height: min-content;
+    width: 100%;
+}
+
+h1{
+    padding-left: 25%;
+    width: max-content;
+    height: min-content;
+}
+.years li{
+    list-style-type: none;
+    width: 20%;
+}
+.line-time{
+    @extend %line-time;
+    top: -80px;
+}
+.line-time li{
+    @extend %line-time-li;
+}
+.line-time li::after {
+    @extend %line-time-li-after;
+  }
+.stage-description li {
+    @extend %stage-description-li;
+    bottom: 165px;
+}
+.line-time-2{
+    @extend %line-time;
+    top: -60px; 
+}
+.line-time-2 li{
+    @extend %line-time-li;
+}
+.line-time-2 li::after {
+    @extend %line-time-li-after;
+}
+.stage-description-2 li {
+    @extend %stage-description-li;
+    bottom: 120px;
+}
+i{
+    margin: 3%;
+}
+.nivel-italiano{
+    @extend %barras-nivel-idioma;
+    width: 20%;
+}
+.nivel-valenciano{
+    @extend %barras-nivel-idioma;
+    width: 90%;
+}
+.nivel-ingles{
+    @extend %barras-nivel-idioma;
+    width: 50%;
+}
